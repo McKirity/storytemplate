@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: Outline
+    filters:
+      and:
+        - file.inFolder("Story")
+        - file.hasTag("outline")
+    order:
+      - file.mtime
+      - file.name
+      - Chapter
+      - Complete

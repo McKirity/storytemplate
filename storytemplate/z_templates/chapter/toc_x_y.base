@@ -1,0 +1,30 @@
+views:
+  - type: table
+    name: Scenes
+    filters:
+      and:
+        - file.inFolder("Story/North")
+        - file.hasTag("scene")
+    order:
+      - file.mtime
+      - Order
+      - file.name
+      - Summary
+      - Rough Draft
+      - Final Draft
+      - Synopsis
+    sort:
+      - property: Order
+        direction: ASC
+  - type: table
+    name: Additional
+    filters:
+      and:
+        - file.inFolder("Story/North")
+        - file.hasTag("beta")
+    order:
+      - file.mtime
+      - file.name
+      - Complete
+    columnSize:
+      file.mtime: 191

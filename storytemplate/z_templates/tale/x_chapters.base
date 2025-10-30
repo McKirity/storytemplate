@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: Chapters
+    filters:
+      and:
+        - file.inFolder("Story/")
+        - file.hasTag("chapter")
+    order:
+      - file.mtime
+      - file.name
+      - Outline
+      - Summary
+      - Rough Draft
+      - Final Draft
+      - Published
